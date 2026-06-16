@@ -1,48 +1,23 @@
 ---
-import {Icon} from 'astro-icon/components';
 import { Button, Container, TextCardSection } from '@components/odyssey-theme';
 import Layout from '../../layouts/Page.astro';
 
 const seo = {
-	title: 'Get Started using the Astro Odyssey Theme',
-	description: 'Get started on how to setup and use this Astro theme.',
+	title: 'Consultation | JC Immigration',
+	description: 'Book a consultation with JC Immigration.',
 };
 ---
 
 <Layout {seo}>
 	<Container>
 		<TextCardSection>
-			<h1>Get Started with Odyssey</h1>
+			<h1>Book a Consultation</h1>
+			<p>
+				This demo route now points visitors toward JC Immigration's consultation
+				process.
+			</p>
 			<div class="cta-buttons__container">
-        <Button
-        href="https://github.com/treefarmstudio/odyssey-theme"
-        outlined
-        newTab
-        customIcon
-        >
-        Get Odyssey Theme
-        <Fragment slot="icon">
-          <Icon name="ic:baseline-launch" />
-        </Fragment>
-      </Button>
-        <Button
-					href="/theme/theme-setup"
-          customIcon
-					>
-          Theme Setup
-          <Fragment slot="icon">
-            <Icon name="ic:baseline-chevron-right" />
-          </Fragment>
-				</Button>
-        <Button
-					href="/theme/customizing-odyssey"
-          customIcon
-					>
-          Customizing Odyssey
-          <Fragment slot="icon">
-            <Icon name="ic:baseline-chevron-right" />
-          </Fragment>
-				</Button>
+				<Button href="/company/contact">Contact JC Immigration</Button>
 			</div>
 		</TextCardSection>
 	</Container>
@@ -53,8 +28,9 @@ const seo = {
 		display: flex;
 		flex-wrap: wrap;
 	}
+
 	.cta-buttons__container :global(a) {
-    margin-right: 1rem;
+		margin-right: 1rem;
 		margin-bottom: 1rem;
 	}
 </style>

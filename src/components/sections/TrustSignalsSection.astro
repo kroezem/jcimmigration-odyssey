@@ -1,0 +1,82 @@
+---
+import { Icon } from 'astro-icon/components';
+import Container from '../core/Container.astro';
+
+const trustItems = [
+	{
+		icon: 'mdi:shield-check',
+		label: 'Licensed RCIC Consultants',
+	},
+	{
+		icon: 'mdi:clock-outline',
+		label: '15+ Years of Experience',
+	},
+	{
+		icon: 'mdi:file-document-check-outline',
+		label: 'End-to-End IRCC Submissions',
+	},
+	{
+		icon: 'mdi:comment-check-outline',
+		label: 'Free Initial Consultation',
+	},
+];
+---
+
+<section class="trust-signals__section" aria-label="Trust signals">
+	<Container>
+		<ul class="trust-signals__list">
+			{
+				trustItems.map((item) => (
+					<li class="trust-signals__item">
+						<Icon name={item.icon} width={32} height={32} aria-hidden="true" />
+						<span>{item.label}</span>
+					</li>
+				))
+			}
+		</ul>
+	</Container>
+</section>
+
+<style>
+	.trust-signals__section {
+		margin: var(--section-margin) auto;
+		padding: 1.5rem 0;
+		border-top: 1px solid color-mix(in srgb, var(--theme-primary) 24%, transparent);
+		border-bottom: 1px solid color-mix(in srgb, var(--theme-primary) 24%, transparent);
+	}
+
+	.trust-signals__list {
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 1rem 2rem;
+		list-style: none;
+	}
+
+	.trust-signals__item {
+		display: flex;
+		align-items: center;
+		gap: 0.6rem;
+		color: var(--theme-on-bg);
+		font-size: var(--font-size-sm);
+		font-weight: 700;
+		text-align: left;
+	}
+
+	.trust-signals__item :global(svg) {
+		flex: 0 0 auto;
+		color: var(--theme-primary);
+	}
+
+	@media (max-width: 768px) {
+		.trust-signals__list {
+			justify-content: flex-start;
+		}
+
+		.trust-signals__item {
+			width: 100%;
+		}
+	}
+</style>

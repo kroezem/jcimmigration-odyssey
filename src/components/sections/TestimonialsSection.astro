@@ -1,0 +1,76 @@
+---
+import Container from '../core/Container.astro';
+
+const testimonials = [
+	{
+		quote:
+			'JC Immigration handled our spousal sponsorship from start to finish — responsive, thorough, and genuinely reassuring throughout.',
+		attribution: 'Priya S., Vancouver',
+	},
+	{
+		quote:
+			'I came to Canada on a study permit and they guided me through every step. I always knew exactly where my application stood.',
+		attribution: 'Daniel O., Toronto',
+	},
+	{
+		quote:
+			'After years of dreaming about Canada, their team made it real. Honest advice and real care the whole way through.',
+		attribution: 'Mei L., Calgary',
+	},
+];
+---
+
+<section class="testimonials__section">
+	<Container>
+		<h2>What Our Clients Say</h2>
+		<div class="testimonials__grid">
+			{
+				testimonials.map((testimonial) => (
+					<article class="testimonials__card">
+						<p>"{testimonial.quote}"</p>
+						<footer>{testimonial.attribution}</footer>
+					</article>
+				))
+			}
+		</div>
+	</Container>
+</section>
+
+<style>
+	.testimonials__section {
+		margin: var(--section-margin) auto;
+	}
+
+	.testimonials__section h2 {
+		margin-bottom: 1.5rem;
+		text-align: center;
+	}
+
+	.testimonials__grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: var(--theme-grid-gap);
+	}
+
+	.testimonials__card {
+		padding: 1.5rem;
+		background-color: var(--theme-surface-1);
+		color: var(--theme-on-surface-1);
+		border-radius: var(--theme-shape-radius);
+	}
+
+	.testimonials__card p {
+		margin-bottom: 1.25rem;
+	}
+
+	.testimonials__card footer {
+		color: var(--theme-primary);
+		font-weight: 600;
+	}
+
+	@media (max-width: 768px) {
+		.testimonials__grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

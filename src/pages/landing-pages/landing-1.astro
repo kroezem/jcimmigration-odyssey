@@ -13,25 +13,28 @@ import Layout from '../../layouts/Page.astro';
 import TextAndImageHero from '../../components/sections/heros/TextAndImageHero.astro';
 
 const seo = {
-	title: 'Landing Page #1 | Astro Odyssey Theme',
-	description: 'Landing Page #1 | Astro Odyssey Theme',
+	title: 'Immigration Services | JC Immigration',
+	description: 'Canadian immigration support for families, workers, students, and visitors.',
 };
 ---
 
 <AnnouncementBar
-	text="Read Our Latest Blog Post"
+	text="Read Our Latest Immigration Update"
 	href="/blog/posts/remote-work-mental-health/"
 	slot="announcement-bar"
 />
 <Layout {seo}>
 	<TextAndImageHero reversed>
 		<div slot="text-container">
-			<h1>Don't Reinvent the Wheel</h1>
-			<p>Use Odyssey Theme to jumpstart your company's marketing website.</p>
+			<h1>Clear Guidance for Your Canadian Immigration Journey</h1>
+			<p>
+				Work with a warm, experienced team that prepares your application with
+				care from consultation to submission.
+			</p>
 		</div>
 		<div slot="btns-container">
-			<Button href="/theme/get-started" customIcon
-				>Get Started <Fragment slot="icon">
+			<Button href="/company/contact" customIcon
+				>Book a Consultation <Fragment slot="icon">
 					<Icon name="ic:baseline-chevron-right" />
 				</Fragment></Button
 			>
@@ -39,48 +42,42 @@ const seo = {
 		<picture slot="image-container">
 			<img
 				src="/assets/images/landing-1/landing-hero-1.jpg"
-				alt="Astro Odyssee"
+				alt="Consultation notes on a desk"
 				id="home-hero-image"
 			/>
 		</picture>
 	</TextAndImageHero>
 
 	<CustomerQuoteSection
-		quoteText="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, vero nobis? Voluptas assumenda, voluptatibus commodi qui ducimus delectus praesentium maiores, impedit iure labore ratione, ea facilis numquam doloremque aperiam aspernatur."
-		customerName="Happy Customer"
+		quoteText="JC Immigration helped us understand every document, deadline, and next step. We felt prepared and supported throughout."
+		customerName="Satisfied Client"
 	/>
 
 	<ThreeColumnTextSection>
 		<div slot="column-1-body">
-			<h2>Why?</h2>
+			<h2>Family Sponsorship</h2>
 			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolorem
-				tempore odio! Nemo consectetur ipsa aperiam similique maxime maiores
-				consequatur explicabo ut quibusdam fugiat corporis, dignissimos tenetur,
-				mollitia cumque. Velit.
+				Bring your spouse, common-law partner, parents, or loved ones closer
+				with organized, complete sponsorship support.
 			</p>
 		</div>
-		<Button slot="column-1-cta">Learn More</Button>
+		<Button slot="column-1-cta" href="/company/contact">Book a Consultation</Button>
 		<div slot="column-2-body">
-			<h2>How?</h2>
+			<h2>Express Entry</h2>
 			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolorem
-				tempore odio! Nemo consectetur ipsa aperiam similique maxime maiores
-				consequatur explicabo ut quibusdam fugiat corporis, dignissimos tenetur,
-				mollitia cumque. Velit.
+				Understand your eligibility, strengthen your profile, and move through
+				permanent residence pathways with practical guidance.
 			</p>
 		</div>
-		<Button slot="column-2-cta" outlined>Learn More</Button>
+		<Button slot="column-2-cta" href="/company/contact">Book a Consultation</Button>
 		<div slot="column-3-body">
-			<h2>What?</h2>
+			<h2>Work, Study & Visit</h2>
 			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolorem
-				tempore odio! Nemo consectetur ipsa aperiam similique maxime maiores
-				consequatur explicabo ut quibusdam fugiat corporis, dignissimos tenetur,
-				mollitia cumque. Velit.
+				Prepare temporary permit and visitor applications with the right
+				supporting documents and a clear plan.
 			</p>
 		</div>
-		<Button slot="column-3-cta">Learn More</Button>
+		<Button slot="column-3-cta" href="/company/contact">Book a Consultation</Button>
 	</ThreeColumnTextSection>
 
 	<YouTubeEmbedSection url="https://www.youtube.com/watch?v=cbYr75_R15M" rounded
@@ -88,33 +85,27 @@ const seo = {
 
 	<StickyTextImageSection>
 		<div slot="text-container">
-			<h2>Features</h2>
-			<h3>SEO</h3>
+			<h2>How We Help</h2>
+			<h3>Assess</h3>
 			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolorem
-				tempore odio! Nemo consectetur ipsa aperiam similique maxime maiores
-				consequatur explicabo ut quibusdam fugiat corporis, dignissimos tenetur,
-				mollitia cumque. Velit.
+				We review your goals, background, timelines, and options before
+				recommending a path forward.
 			</p>
-			<h3>Responsive</h3>
+			<h3>Prepare</h3>
 			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolorem
-				tempore odio! Nemo consectetur ipsa aperiam similique maxime maiores
-				consequatur explicabo ut quibusdam fugiat corporis, dignissimos tenetur,
-				mollitia cumque. Velit.
+				Our team helps gather documents, identify gaps, and prepare clear
+				submissions for immigration officers.
 			</p>
-			<h3>Themeable</h3>
+			<h3>Submit</h3>
 			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolorem
-				tempore odio! Nemo consectetur ipsa aperiam similique maxime maiores
-				consequatur explicabo ut quibusdam fugiat corporis, dignissimos tenetur,
-				mollitia cumque. Velit.
+				We keep your application organized, track status updates, and explain
+				next steps as your file moves forward.
 			</p>
 		</div>
 		<picture slot="image-container">
 			<img
 				src="/assets/images/landing-1/landing-sticky.jpg"
-				alt="Astro Odyssey"
+				alt="Immigration planning materials"
 				loading="lazy"
 			/>
 		</picture>
@@ -124,13 +115,13 @@ const seo = {
 		background="var(--theme-surface-2)"
 		color="var(--theme-on-surface-2)"
 	>
-		<h2>Start Your Website Today</h2>
+		<h2>Ready to Start Your Immigration Journey?</h2>
 		<p>
-			It only takes a couple clicks to have a new, modern website for your
-			business or startup.
+			Book a consultation and get clear, honest guidance from a team that knows
+			the Canadian immigration process personally.
 		</p>
-		<Button href="/theme/get-started" customIcon
-			>Get Started <Fragment slot="icon">
+		<Button href="/company/contact" customIcon
+			>Book a Consultation <Fragment slot="icon">
 				<Icon name="ic:baseline-chevron-right" />
 			</Fragment></Button
 		>
